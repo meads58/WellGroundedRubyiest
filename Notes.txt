@@ -1,0 +1,23 @@
+Local variables - LOWEST SCOPE:consist of letters, underscores and or digits. USE UNDERSCORES AND NOT camelCase.
+The scope of a local variable ranges from class, module, def, or do to the corresponding end or from a block's opening brace to its close brace {}.
+Instance variables - OBJECT SCOPE e.g. seen everwhere in object and starts with @.
+Class variables - CLASS SCOPE and start with @@. An example is counting object instances.
+Global variables - USED ANYWHERE start with a $ and can be used anywhere, not reccommended.
+
+Constants - Start with a capital and use camelCase
+
+Methods - Start with a lowercase and use underscores and not
+
+Objects - Everything(strings, integers, values etc..) in ruby is an object.
+		Every object can understand a certain set of messages.
+		Each messages maps directly to a method:name executable routine whose execution the object has the ability to trigger.
+Message sending is done via dot operator e.g. the message on the right is sent to the object on the left e.g. "100".to_i here the message "to_i" is sent to the string "100" object. The message maps to a method.
+Sending the message "to_i" and Calling the method to_i becasue sometimes there is no corresponding method.
+
+Methods can take arguments which are also objects. e.g. x = "100".to_i(9) call to_i on 100 with an argument of 9.
+
+Programming ruby is specifing what you want the objects to do (by def methods) or asking the objects to do something (sending messages).
+
+Classes define clusters of object behaviour and EVERY OBJECT is an INSTANCE of EXACTLY ONE CLASS. The class is responsible for launching the Object but the object thereafter has its own life.
+
+  
