@@ -1,3 +1,5 @@
+Ruby Identifiers
+
 Local variables - LOWEST SCOPE:consist of letters, underscores and or digits. USE UNDERSCORES AND NOT camelCase.
 The scope of a local variable ranges from class, module, def, or do to the corresponding end or from a block's opening brace to its close brace {}.
 Instance variables - OBJECT SCOPE e.g. seen everwhere in object and starts with @.
@@ -20,4 +22,25 @@ Programming ruby is specifing what you want the objects to do (by def methods) o
 
 Classes define clusters of object behaviour and EVERY OBJECT is an INSTANCE of EXACTLY ONE CLASS. The class is responsible for launching the Object but the object thereafter has its own life.
 
-  
+Ruby switches: ruby -h for a list of switches
+Some useful ones
+-cw checks the syntax with executing and gives you warnings
+-v shows the version of ruby your running
+-e runs the code in the quotes e.g. ruby -e "puts 'this will run the puts and this text'" 
+
+irb:
+--simple-prompt running in simple 
+When irb sees an expression it prints it out its value. That's why irb is always printing out your varialble assignments e.g
+>>days = 365
+=>365
+here we have an assignment express with the varible days assigned to the value 365 hence irb prints the expressions value.
+
+Using --noecho flag will stop irb from doing this.
+
+ri and RDoc:
+To enable ri you need to edit ~/.gemrc and remove the --no-ri section. 
+RDoc - Ruby Documentation(includes the command line tool) It takes your comments and creates nicely formatted documentation from them.
+	RDoc uses SimpleMarkup for its syntax which is XML-style tags.
+	YARD is an alternative to RDoc and may be better.
+ri - Ruby Index(command line tool) Gives you a way to view the info in RDoc e.g. ri String#upcase
+
