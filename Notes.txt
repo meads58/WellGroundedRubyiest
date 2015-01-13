@@ -44,3 +44,7 @@ RDoc - Ruby Documentation(includes the command line tool) It takes your comments
 	YARD is an alternative to RDoc and may be better.
 ri - Ruby Index(command line tool) Gives you a way to view the info in RDoc e.g. ri String#upcase
 
+rake take-management utility:
+Like make, rake reads and executes tasks defined in a file—a Rakefile. Unlike make, however, rake uses Ruby syntax to define its tasks.
+
+gem command: way to install from the Rubygems library.
