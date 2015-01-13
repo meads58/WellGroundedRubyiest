@@ -1,0 +1,35 @@
+Objects: everything in ruby is an object
+You send objects messages which usually map to methods that you're asking the object to execute.
+
+Ruby objects are most often handled via variables that represent them.
+
+Talking to Objects: With Ruby programs you are 
+	- creating objects
+	- empowering objects with abilities
+	- asking them to perform actions
+
+when you want something done you ask the object to do it. Rather than ask if 'a' equals 'b' you ask 'a' if it considers itself equal to 'b'.
+Ruby programming is about engineering objects so they have a clear role and can perform actions related to their role.
+
+Every object is an example of instance of a particular class, and the behaviour of individual objects to some extent is determind by the method definitions in the object's class.
+
+Object-oriented software is 
+	-figure out what you want your objects to be
+	-what they should do
+	-how they interact with each other
+	-how many of each there should be etc..
+
+Creating a generic object
+obj = Object.new
+
+Defining an object's behaviour: You do this by defining a method for the object. e.g. I want my object to talk, then you define a talk method so it can.
+
+def obj.talk
+	puts "I am an object"
+	puts "(Do you object?)"
+end
+
+Sending messages to an object
+obj.talk
+
+the '.' is the messaging operator. The message is on the right is sent to the object (or receiver) on the left. The message being sent is almost usually a method.

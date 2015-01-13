@@ -22,6 +22,13 @@ Programming ruby is specifing what you want the objects to do (by def methods) o
 
 Classes define clusters of object behaviour and EVERY OBJECT is an INSTANCE of EXACTLY ONE CLASS. The class is responsible for launching the Object but the object thereafter has its own life.
 
+
+Loading external files and switches:
+Breaking a program in separate files makes dealing with a lot of code easier. 
+Ruby require and load methods allow you bring code into your file from another file
+load 'file name' : always loads the file you ask for e.g. if you make a change to a file and reload and will take this newest version
+require : same as load but if called more than once doesn't reload the file again e.g. if file changes you don't get the newest version.
+
 Ruby switches: ruby -h for a list of switches
 Some useful ones
 -cw checks the syntax with executing and gives you warnings
@@ -46,5 +53,15 @@ ri - Ruby Index(command line tool) Gives you a way to view the info in RDoc e.g.
 
 rake take-management utility:
 Like make, rake reads and executes tasks defined in a file—a Rakefile. Unlike make, however, rake uses Ruby syntax to define its tasks.
+When you compile your code you repeat a number of steps they require an order or dependency on something else. Rakefiles are a set of build tasks that have depenencies on other tasks
+e.g.     directory "tmp"
+ 
+  file "tmp/hello.tmp" => "tmp" do
+    sh "echo 'Hello' > 'tmp/hello.tmp'"
+  end
+  What we’re saying here is that the file named “hello.tmp” depends on the directory "tmp". When rake runs across this, it’s going to create the directory "tmp" first before running the "hello.tmp" task. 
+
 
 gem command: way to install from the Rubygems library.
+once you have your gem you use 'require' to use it in your file.
+
